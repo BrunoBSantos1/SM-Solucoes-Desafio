@@ -10,27 +10,21 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td><i class="fas fa-info"></i></td>
+            <tr *ngFor="let data of dataUser">
+                <th scope="row">{{ data.id }}</th>
+                <td>{{ data.first_name}}</td>
+                <td>{{ data.last_name }}</td>
+                <td>{{ data.email}}</td>
+                <td><button type="button" class="btn btn-primary" routerLink="/read/user/datails/{{data.id}}">Detalhes</button></td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td><i class="fas fa-info"></i></td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td><button>testre</button></td>
-            </tr>
+            <nav aria-label="Navegação de página exemplo">
+                <ul class="pagination">
+                    <li (click)="isFirstPage()" class="page-item"><a class="page-link">1</a></li>
+                    <li (click)="isSecondPage()" class="page-item"><a class="page-link">2</a></li>
+                    <li (click)="isThirdPage()" class="page-item"><a class="page-link">3</a></li>
+                    <li (click)="isFourthPage()" class="page-item"><a class="page-link">4</a></li>
+                </ul>
+            </nav>
         </tbody>
     </table>
 </div>
