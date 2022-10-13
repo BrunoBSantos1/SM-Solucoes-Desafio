@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Cadastre - se</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="efetuarRegister()">
+        <div class="form-outline mb-4">
+            <input type="email" id="email" class="form-control"  formControlName="email"/>
+            <label class="form-label">Email</label>
+        </div>
+        <div class="form-outline mb-4">
+            <input type="password" id="password" class="form-control" formControlName="password"/>
+            <label class="form-label">Password</label>
+        </div>
+        <div class="row mb-4">
+            <div class="col d-flex justify-content-center">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block mb-4" [disabled]="!registerForm.valid">Cadastrar</button>
+        <div class="text-center">
+            <p>Já possui conta? <a routerLink="/login">Login</a></p>
+        </div>
+    </form>
+</div>

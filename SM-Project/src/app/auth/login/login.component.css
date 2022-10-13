@@ -1,0 +1,9 @@
+.container {
+    margin-top: 100px;
+    width:  700px;
+}
+
+.container h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
