@@ -1,22 +1,24 @@
 <div class="container">
-    <h4>Lista de Usuarios</h4>
+    <h4>Lista de Resources</h4>
     <table class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
-                <th scope="col">Sobrenome</th>
-                <th scope="col">E-mal</th>
+                <th scope="col">Ano</th>
+                <th scope="col">Color</th>
+                <th scope="col">Pantone</th>
                 <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let data of dataUser">
+            <tr *ngFor="let data of dataResource">
                 <th scope="row">{{ data.id }}</th>
-                <td>{{ data.first_name}}</td>
-                <td>{{ data.last_name }}</td>
-                <td>{{ data.email}}</td>
-                <td><button type="button" class="btn btn-primary" routerLink="/read/user/datails/{{data.id}}">Detalhes</button></td>
+                <td>{{ data.name }}</td>
+                <td>{{ data.year }}</td>
+                <td>{{ data.color }}</td>
+                <td>{{ data.pantone_value }}</td>
+                <td><button type="button" class="btn btn-primary" >Detalhes</button></td>
             </tr>
             <nav aria-label="Navegação de página exemplo">
                 <ul class="pagination">
