@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { DashboardsComponent } from './components/dashboards/dashboards.component';
 import { NavbarComponent } from './components/navbar/navbar/navbar.component';
+import { ResourceModule } from './resource/resource.module';
 import { UserModule } from './user/user.module';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { UserModule } from './user/user.module';
     BrowserModule,
     AuthModule,
     UserModule,
+    ResourceModule,
     AppRoutingModule
   ],
   providers: [],
