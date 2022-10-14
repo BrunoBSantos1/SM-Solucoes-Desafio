@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataUser } from '../models/dataUser.model';
 import { UserPage } from '../models/user.model';
-import { ReadUserService } from '../read-user.service';
+import { ReadUserService } from '../user.service';
 
 @Component({
   selector: 'app-datails',

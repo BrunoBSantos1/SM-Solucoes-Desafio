@@ -1,8 +1,8 @@
-import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AppService } from 'src/app/app.service';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -14,7 +14,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private appService: AppService
   ) { }
 
   ngOnInit(): void {
@@ -30,20 +31,18 @@ export class LoginComponent implements OnInit {
     this.loginConectService(userLogin);
   }
 
-  loginConectService(data:any) {
+  loginConectService(data: any) {
     try {
       this.authService.efetuarLogin(data).subscribe((response) => {
-        if(response.token) {
+        if (response.token) {
           let user = response.token
-          console.log(user)
           localStorage.setItem('userLogado', user)
+          this.appService.showMessage('Login efetuado com sucesso!')
 
           this.router.navigate(['read/user']);
-        }else{
-          
         }
       })
-    } catch (error) {}
+    } catch (error) { }
   }
 
 }

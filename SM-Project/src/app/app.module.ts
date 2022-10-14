@@ -8,6 +8,8 @@ import { DashboardsComponent } from './components/dashboards/dashboards.componen
 import { NavbarComponent } from './components/navbar/navbar/navbar.component';
 import { ResourceModule } from './resource/resource.module';
 import { UserModule } from './user/user.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { UserModule } from './user/user.module';
     AuthModule,
     UserModule,
     ResourceModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatSnackBarModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
