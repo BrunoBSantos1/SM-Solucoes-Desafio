@@ -2,3 +2,10 @@
     margin-left: 70px;
     margin-top: 20px;
 }
+
+.containerHeader {
+    margin-left: 50px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+}

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs';
 import { DataUser } from '../models/dataUser.model';
 import { UserPage } from '../models/user.model';
-import { ReadUserService } from '../read-user.service';
+import { ReadUserService } from '../user.service';
 
 @Component({
   selector: 'app-read-user',
@@ -21,41 +21,33 @@ export class ReadUserComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    //this.readUserService.getAllUsers('2').subscribe(data => {this.users = data; console.log(this.user)})
     this.getUsers()
-    
   }
 
   async getUsers() {
     this.readUserService.getAllUsers(`${this.page}`).subscribe((response) => {
       this.users = response;
       this.dataUser = this.users.data;
-      console.log(this.dataUser)
     });
   }
 
   isFirstPage() {
     this.page = '1';
     this.getUsers()
-    console.log(this.page)
   }
 
   isSecondPage() {
     this.page = '2';
     this.getUsers()
-    console.log(this.page)
   }
 
   isThirdPage() {
     this.page = '3';
     this.getUsers()
-    console.log(this.page)
   }
 
   isFourthPage() {
     this.page = '4';
     this.getUsers()
-    console.log(this.page)
   }
-
 }

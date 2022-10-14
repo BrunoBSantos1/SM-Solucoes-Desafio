@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AppService } from 'src/app/app.service';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private appService: AppService
   ) { }
 
   ngOnInit(): void {
@@ -28,19 +30,17 @@ export class RegisterComponent implements OnInit {
     this.registerConectService(userRegister);
   }
 
-  registerConectService(data:any) {
+  registerConectService(data: any) {
     try {
       this.authService.createRegister(data).subscribe((response) => {
-        console.log(response);
-  
+        this.appService.showMessage('Cadastro criado com sucesso!')
+
         this.router.navigate(['/login']);
       })
-    } catch (error) {
-      console.log('erro', error)
-    }
-    
+    } catch (error) { }
+
   }
-  
+
 
 
 }
