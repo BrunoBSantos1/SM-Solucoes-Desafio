@@ -11,6 +11,9 @@ const authRoutes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: '', redirectTo: '/login', pathMatch: 'full'
   }
 ];
 
