@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataUser } from '../models/dataUser.model';
 import { UserPage } from '../models/user.model';
@@ -14,7 +15,11 @@ export class DatailsComponent implements OnInit {
   users: UserPage
   dataUser: DataUser
 
-  name: String
+  updateUserForm = new FormGroup({
+    first_name: new FormControl(''),
+    last_name: new FormControl(''),
+    job: new FormControl('')
+  });
 
   constructor(
     private readUserService: ReadUserService,
@@ -24,6 +29,10 @@ export class DatailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.datailsUser()
+  }
+
+  updateUser() {
+
   }
 
   datailsUser() {

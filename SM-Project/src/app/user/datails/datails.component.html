@@ -1,18 +1,18 @@
 <div class="container">
     <h2>Atualizar Usuario</h2>
-    <form>
+    <form [formGroup]="updateUserForm" (ngSubmit)="updateUser()">
         <div class="mb-3">
             <label class="form-label">Nome</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" formControlName="first_name">
         </div>
         <div class="mb-3">
             <label class="form-label">Sobrenome</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" formControlName="last_name">
         </div>
         <div class="mb-3">
             <label class="form-label">Trabalho</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" formControlName="job">
         </div>
-        <input type="submit" class="btn btn-primary" value="Atualizar">
+        <button type="submit" class="btn btn-primary" value="Cadastrar">Atualizar</button>
     </form>
 </div>

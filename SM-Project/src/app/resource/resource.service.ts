@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { DataResource } from './models/dataResource.model';
 import { ResourcePage } from './models/reourcePage.model';
+import { ResponseDataResource } from './models/responseDataResource';
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +21,8 @@ export class ResourceService {
     return this.http.get<ResourcePage>(`${this.url}unknown?page=${flag}`);
   }
 
-  readonlyResource(id: Number): Observable<DataResource> {
-    return this.http.get<DataResource>(`${this.url}unknown/${id}`)
+  readonlyResource(id: Number): Observable<ResponseDataResource> {
+    return this.http.get<ResponseDataResource>(`${this.url}unknown/${id}`)
   }
 
 }
