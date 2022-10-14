@@ -4,7 +4,8 @@
             <h4>Lista de Usuarios</h4>
         </div>
         <div>
-            <button type="button" class="btn btn-primary" routerLink="/create/user"><i class="fas fa-user-plus"></i> Novo Usuario</button>
+            <button type="button" class="btn btn-primary" routerLink="/create/user"><i class="fas fa-user-plus"></i>
+                Novo Usuario</button>
         </div>
     </div>
     <table class="table">
@@ -24,7 +25,10 @@
                 <td>{{ data.last_name }}</td>
                 <td>{{ data.email}}</td>
                 <td><button type="button" class="btn btn-primary"
-                        routerLink="/read/user/datails/{{data.id}}">Detalhes</button></td>
+                        routerLink="/read/user/datails/{{data.id}}">Detalhes</button> |  
+                        <button type="button" class="btn btn-danger"
+                       (click)="deleteUser(data.id)">Excluir</button>
+                </td>
             </tr>
             <nav aria-label="Navegação de página exemplo">
                 <ul class="pagination">

@@ -33,4 +33,7 @@ export class ReadUserService {
     return this.http.put<User>(`${this.url}${user.id}`, user)
   }
 
+  delete(id: number): Observable<User> {
+    return this.http.delete<User>(`${this.url}${id}`)
+  }
 }

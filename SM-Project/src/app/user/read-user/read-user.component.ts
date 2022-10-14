@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { AppService } from 'src/app/app.service';
 import { DataUser } from '../models/dataUser.model';
 import { UserPage } from '../models/user.model';
 import { ReadUserService } from '../user.service';
@@ -17,7 +18,9 @@ export class ReadUserComponent implements OnInit {
   page = '1';
 
   constructor(
-    private readUserService: ReadUserService
+    private readUserService: ReadUserService,
+    private route: ActivatedRoute,
+    private appService: AppService
   ) { }
 
   ngOnInit(): void {
@@ -29,6 +32,12 @@ export class ReadUserComponent implements OnInit {
       this.users = response;
       this.dataUser = this.users.data;
     });
+  }
+
+  async deleteUser(id: number) {
+    this.readUserService.delete(id).subscribe(() => {
+      this.appService.showMessage('Usuario excluído com sucesso!')
+    })
   }
 
   isFirstPage() {
