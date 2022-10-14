@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AppService } from 'src/app/app.service';
 import { DataUser } from '../models/dataUser.model';
 import { UserPage } from '../models/user.model';
 import { ReadUserService } from '../user.service';
@@ -12,7 +13,7 @@ import { ReadUserService } from '../user.service';
 })
 export class DatailsComponent implements OnInit {
 
-  users: UserPage
+  responseDataUser: UserPage
   dataUser: DataUser
 
   updateUserForm = new FormGroup({
@@ -24,22 +25,31 @@ export class DatailsComponent implements OnInit {
   constructor(
     private readUserService: ReadUserService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private appService: AppService
   ) { }
 
   ngOnInit(): void {
+
     this.datailsUser()
   }
 
   updateUser() {
 
   }
+  updateUserConect(data) {
+    this.readUserService.updateUser(data).subscribe(() => {
+      this.appService.showMessage('Usuario atualizado com sucesso!');
+
+      this.router.navigate(['/read/user'])
+    })
+  }
 
   datailsUser() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.readUserService.readonlyUser(id).subscribe((response) => {
-      this.dataUser = response
-      console.log(this.dataUser)
+      this.dataUser = response.data
+      console.log(this.dataUser.id)
     });
   }
 

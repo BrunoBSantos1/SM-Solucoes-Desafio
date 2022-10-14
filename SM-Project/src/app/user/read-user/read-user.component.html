@@ -25,7 +25,7 @@
                 <td>{{ data.last_name }}</td>
                 <td>{{ data.email}}</td>
                 <td><button type="button" class="btn btn-primary"
-                        routerLink="/read/user/datails/{{data.id}}">Detalhes</button> |  
+                        (click)="updateUser(data.id)">Detalhes</button> |  
                         <button type="button" class="btn btn-danger"
                        (click)="deleteUser(data.id)">Excluir</button>
                 </td>

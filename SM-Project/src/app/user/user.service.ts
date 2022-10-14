@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { map, Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { DataUser } from './models/dataUser.model';
+import { ResponseDataUser } from './models/responseDatauser';
 import { User } from './models/user';
 import { UserPage } from './models/user.model';
 
@@ -21,8 +22,8 @@ export class ReadUserService {
     return this.http.get<UserPage>(`${this.url}users?page=${flag}?delay=3`);
   }
 
-  readonlyUser(id: Number): Observable<DataUser> {
-    return this.http.get<DataUser>(`${this.url}users/${id}`)
+  readonlyUser(id: Number): Observable<ResponseDataUser> {
+    return this.http.get<ResponseDataUser>(`${this.url}users/${id}`)
   }
 
   createUser(user: User): Observable<User> {
