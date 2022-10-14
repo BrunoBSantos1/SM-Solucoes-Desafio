@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AppService } from 'src/app/app.service';
 import { DataUser } from '../models/dataUser.model';
 import { UserPage } from '../models/user.model';
@@ -20,7 +20,8 @@ export class ReadUserComponent implements OnInit {
   constructor(
     private readUserService: ReadUserService,
     private route: ActivatedRoute,
-    private appService: AppService
+    private appService: AppService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -38,6 +39,10 @@ export class ReadUserComponent implements OnInit {
     this.readUserService.delete(id).subscribe(() => {
       this.appService.showMessage('Usuario excluído com sucesso!')
     })
+  }
+
+  updateUser(id: number) {
+    this.router.navigate(['/read/user/datails/', id], { relativeTo: this.route})
   }
 
   isFirstPage() {

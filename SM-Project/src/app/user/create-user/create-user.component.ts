@@ -33,8 +33,7 @@ export class CreateUserComponent implements OnInit {
 
   registerConectService(data: any) {
     try {
-      this.userService.createUser(data).subscribe((response) => {
-        console.log('user: ',response)
+      this.userService.createUser(data).subscribe(() => {
         this.appService.showMessage('Cadastro criado com sucesso!')
 
         this.router.navigate(['/read/user']);
