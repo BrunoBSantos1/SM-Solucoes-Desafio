@@ -18,8 +18,6 @@ import { CreateUserComponent } from './create-user/create-user.component';
     UserRoutingModule,
     ReactiveFormsModule
   ],
-  exports: [
-    ReadUserComponent
-  ]
+  exports: []
 })
 export class UserModule { }

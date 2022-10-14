@@ -14,8 +14,6 @@ import { ResourceRoutingModule } from './resource.routing.module';
     CommonModule,
     ResourceRoutingModule
   ],
-  exports: [
-    ReadResourceComponent
-  ]
+  exports: []
 })
 export class ResourceModule { }
