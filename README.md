@@ -4,8 +4,8 @@ Nota: Devido os endpoints não salvarem os dados, os cadastros e as listagens do
 
 No ato do registro (Criar conta), por política do site que disponibiliza os endpoints, não é permitido que qualquer conta de e-mail efetue registro. O site disponibiliza um endereço de e-mail padrão para os cadastros, e cada usuário informa sua senha.
 
-E-mail para cadastro: eve.holt@reqres.in
-Senha: Você informa a senha de sua preferência.
+  - E-mail para cadastro: eve.holt@reqres.in
+  - Senha: Você informa a senha de sua preferência.
 
 # Processo
 Passo 1:
