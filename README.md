@@ -6,22 +6,22 @@ No ato do registro (Criar conta), por política do site que disponibiliza os end
 E-mail para cadastro: eve.holt@reqres.in
 Senha: Você informa a senha de sua preferência.
 
-Processo
+# Processo
 Passo 1:
-	Criar modulo de Autenticação
-o	Efetuar login
-o	Efetuar o cadastro
+  - Criar modulo de Autenticação
+  - Efetuar login
+  - Efetuar o cadastro
 
 Passo 2:
-	Menu superior
+  - Menu superior
 
 Passo 3:
-	Criar modulo de Usuario
-o	Create
-o	Read
-o	Update
-o	Delete
+  - Criar modulo de Usuario
+    . Create
+    . Read
+    . Update
+    . Delete
 
 Passo 4:
-	Criar modulo de Resource
-o	Read
+  - Criar modulo de Resource
+    . Read
