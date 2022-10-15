@@ -10,19 +10,19 @@ No ato do registro (Criar conta), por política do site que disponibiliza os end
 # Processo
 Passo 1:
   - Criar modulo de Autenticação
-  - Efetuar login
-  - Efetuar o cadastro
+    - Efetuar login
+    - Efetuar o cadastro
 
 Passo 2:
   - Menu superior
 
 Passo 3:
   - Criar modulo de Usuario
-    . Create
-    . Read
-    . Update
-    . Delete
+    - Create
+    - Read
+    - Update
+    - Delete
 
 Passo 4:
   - Criar modulo de Resource
-    . Read
+    - Read
