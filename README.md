@@ -7,6 +7,8 @@ No ato do registro (Criar conta), por política do site que disponibiliza os end
   - E-mail para cadastro: eve.holt@reqres.in
   - Senha: Você informa a senha de sua preferência.
 
+# Arquitetura
+(SM-Project/imagens_documentacao/Captura de Tela (3).png)
 # Processo
 Passo 1:
   - Criar modulo de Autenticação
