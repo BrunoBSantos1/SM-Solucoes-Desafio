@@ -8,7 +8,10 @@ No ato do registro (Criar conta), por política do site que disponibiliza os end
   - Senha: Você informa a senha de sua preferência.
 
 # Arquitetura
-![alt text](https://SM-Project/imagens_documentacao/Captura de Tela (3).png)
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/49588293/196011932-2e05b129-ae0c-4e97-8356-fe6178ed6fa3.png" width="700px" />
+</div>
+
 # Processo
 Passo 1:
   - Criar modulo de Autenticação
